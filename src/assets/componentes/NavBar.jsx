@@ -1,5 +1,44 @@
 import React from "react";
+import logo from "../img/iconos/logo.png"
+import imgCarrito from "../img/iconos/carrito-de-compras.png"
 
+function NavBar () {
 
+return (
+<div>
+    <header>
+        <a href="#" className="home"><img src={logo} className="logoHome" alt="Luxury Cars" /></a>
+        <div className="links">
+            <ul className="nav">
+                <li className="nav-item">
+                    <a className="nav-link" href="#">Inicio</a>
+                </li>
+                <li className="nav-item">
+                    <a className="nav-link" href="#">Buscá tu auto</a>
+                </li>
+                <li className="nav-item">
+                    <a className="nav-link" href="#">Contactános</a>
+                </li>
+                <li className="nav-item">
+                    <a className="nav-link" href="#">¿Quienes somos?</a>
+                </li>
+                <li className="nav-item">
+                    <a className="nav-link" href="#">Sucursales</a>
+                </li>
+            </ul>
+        </div>
+        <div className="carrito">
+            <button type="button" class="btn position-relative">
+                <img src={imgCarrito} className="logoCarrito"/>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    0
+                    <span class="visually-hidden">unread messages</span>
+                </span>
+            </button>
+        </div>
+    </header>
+</div>
+)
+}
 
 export default NavBar;
