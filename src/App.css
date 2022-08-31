@@ -34,3 +34,25 @@ header {
 .nav-item:hover {
   border-bottom: 2px solid red;
 }
+
+/* Item List Container */
+
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 5rem;
+}
+
+.listContainer h1 {
+  text-align: center;
+}
+
+.cardContainer {
+  display: flex;
+  margin: 3rem;
+}
+
+.card {
+  margin: 2rem;
+  padding: 1rem;
+}

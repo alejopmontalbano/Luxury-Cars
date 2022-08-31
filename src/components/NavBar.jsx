@@ -1,13 +1,12 @@
 import React from "react";
-import logo from "../img/iconos/logo.png"
-import imgCarrito from "../img/iconos/carrito-de-compras.png"
+import imgCarrito from "./assets/img/iconos/carrito-de-compras.png"
+import CartWidget from "./CartWidget";
 
 function NavBar () {
 
 return (
-<div>
     <header>
-        <a href="#" className="home"><img src={logo} className="logoHome" alt="Luxury Cars" /></a>
+        <CartWidget />
         <div className="links">
             <ul className="nav">
                 <li className="nav-item">
@@ -37,7 +36,6 @@ return (
             </button>
         </div>
     </header>
-</div>
 )
 }
 
