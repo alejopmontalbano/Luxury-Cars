@@ -77,3 +77,7 @@ header {
 .boton-agregar {
   margin: 1rem;
 }
+
+.itemCount {
+  margin: 0 auto;
+}

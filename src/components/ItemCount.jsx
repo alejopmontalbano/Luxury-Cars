@@ -30,7 +30,7 @@ function ItemCount({stock, initial, onAdd}) {
 
     return (
         <div className="itemCount">
-            <h2>Carrito</h2>
+            <h2 className="text-center">Carrito de compras</h2>
             <div className="card" style={{width: '30rem'}}>
                 <img src={mercedes} className="card-img-top" alt="mercedes"/>
                 <div className="card-body">
