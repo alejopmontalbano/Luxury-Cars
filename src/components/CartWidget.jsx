@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./assets/img/iconos/logo.png"
+import logo from "../assets/img/iconos/logo.png"
 
 function CartWidget () {
     return (

@@ -1,5 +1,5 @@
 import React from "react";
-import imgCarrito from "./assets/img/iconos/carrito-de-compras.png"
+import imgCarrito from "../assets/img/iconos/carrito-de-compras.png"
 import CartWidget from "./CartWidget";
 
 function NavBar () {

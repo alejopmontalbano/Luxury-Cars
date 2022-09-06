@@ -1,54 +1,57 @@
 import React from "react";
-import logoAudi from './assets/img/logos/audi-logo.jpg';
-import logoBmw from './assets/img/logos/bmw-logo.jpg';
-import logoFord from './assets/img/logos/ford-logo.jpg';
-import logoMercedesBenz from './assets/img/logos/mercedes-benz-logo.jpg';
-import logoPeugeot from './assets/img/logos/peugeot-logo.jpg';
-import logoPorsche from './assets/img/logos/porsche-logo.jpg';
-import logoToyota from './assets/img/logos/toyota-logo.jpg';
-import logoVolkswagen from './assets/img/logos/volkswagen-logo.jpg';
+import logoAudi from '../assets/img/logos/audi-logo.png';
+import logoBmw from '../assets/img/logos/bmw-logo.jpg';
+import logoFord from '../assets/img/logos/ford-logo.jpg';
+import logoMercedesBenz from '../assets/img/logos/mercedes-benz-logo.jpg';
+import logoPeugeot from '../assets/img/logos/peugeot-logo.jpg';
+import logoPorsche from '../assets/img/logos/porsche-logo-2.jpg';
+import logoToyota from '../assets/img/logos/toyota-logo.jpg';
+import logoVolkswagen from '../assets/img/logos/volkswagen-logo.jpg';
+import ItemCount from '../components/ItemCount.jsx';
 
 
 function ItemListContainer () {
     return (
         <div className="listContainer">
-            <h1>Busca tu marca favorita</h1>
+            <h1>Buscá tu marca favorita</h1>
 
             <div className="cardContainer">
 
-                <div className="card" style={{width: '30rem'}}>
-                    <img src={logoAudi} className="card-img-top" alt="Audi" />
+                <div className="card" style={{width: '12rem'}}>
+                    <img src={logoAudi} className="card-img-top logo-marca" alt="Audi" />
                 </div>
 
-                <div className="card" style={{width: '30rem'}}>
-                    <img src={logoBmw} className="card-img-top" alt="BMW" />
+                <div className="card" style={{width: '12rem'}}>
+                    <img src={logoBmw} className="card-img-top logo-marca" alt="BMW" />
                 </div>
 
-                <div className="card" style={{width: '30rem'}}>
-                    <img src={logoFord} className="card-img-top" alt="Ford" />
+                <div className="card" style={{width: '12rem'}}>
+                    <img src={logoMercedesBenz} className="card-img-top logo-marca" alt="Mercedes Benz" />
                 </div>
 
-                <div className="card" style={{width: '30rem'}}>
-                    <img src={logoMercedesBenz} className="card-img-top" alt="Mercedes Benz" />
+                <div className="card" style={{width: '12rem'}}>
+                    <img src={logoPorsche} className="card-img-top logo-marca" alt="Porsche" />
                 </div>
 
-                <div className="card" style={{width: '30rem'}}>
-                    <img src={logoPeugeot} className="card-img-top" alt="Peugeot" />
+                <div className="card" style={{width: '12rem'}}>
+                    <img src={logoFord} className="card-img-top logo-marca" alt="Ford" />
                 </div>
 
-                <div className="card" style={{width: '30rem'}}>
-                    <img src={logoPorsche} className="card-img-top" alt="Porsche" />
+                <div className="card" style={{width: '12rem'}}>
+                    <img src={logoPeugeot} className="card-img-top logo-marca" alt="Peugeot" />
                 </div>
 
-                <div className="card" style={{width: '30rem'}}>
-                    <img src={logoToyota} className="card-img-top" alt="Toyota" />
+                <div className="card" style={{width: '12rem'}}>
+                    <img src={logoToyota} className="card-img-top logo-marca" alt="Toyota" />
                 </div>
 
-                <div className="card" style={{width: '30rem'}}>
-                    <img src={logoVolkswagen} className="card-img-top" alt="Volkswagen" />
+                <div className="card" style={{width: '12rem'}}>
+                    <img src={logoVolkswagen} className="card-img-top logo-marca" alt="Volkswagen" />
                 </div>
 
             </div>
+
+            <ItemCount stock={10} initial={1} onAdd={0} />
 
         </div>
     )
