@@ -3,6 +3,11 @@
   padding: 0;
 }
 
+p {
+  padding: 0;
+  margin: 0;
+}
+
 /* NavBar */
 
 header {
@@ -36,19 +41,19 @@ header {
   border-bottom: 2px solid red;
 }
 
-/* Item List Container */
+/* Marcas */
 
-.listContainer {
+.marcasContainer {
   display: flex;
   flex-direction: column;
   margin: 5rem;
 }
 
-.listContainer h1 {
+.marcasContainer h1 {
   text-align: center;
 }
 
-.cardContainer {
+.marcasCardContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -80,4 +85,41 @@ header {
 
 .itemCount {
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.ItemCount-stock {
+  display: flex;
+}
+
+.ItemCount-stock p {
+  margin: 0 15px;
+}
+
+.incrementador {
+  width: auto;
+}
+
+.containerItemListContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.Item-Marca-Modelo {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.Item-Estado-Auto {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.precio {
+  font-size: 1.7rem;
+  margin: .8rem;
 }

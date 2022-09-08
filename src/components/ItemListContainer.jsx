@@ -1,58 +1,36 @@
 import React from "react";
-import logoAudi from '../assets/img/logos/audi-logo.png';
-import logoBmw from '../assets/img/logos/bmw-logo.jpg';
-import logoFord from '../assets/img/logos/ford-logo.jpg';
-import logoMercedesBenz from '../assets/img/logos/mercedes-benz-logo.jpg';
-import logoPeugeot from '../assets/img/logos/peugeot-logo.jpg';
-import logoPorsche from '../assets/img/logos/porsche-logo-2.jpg';
-import logoToyota from '../assets/img/logos/toyota-logo.jpg';
-import logoVolkswagen from '../assets/img/logos/volkswagen-logo.jpg';
-import ItemCount from '../components/ItemCount.jsx';
+import { useEffect } from "react";
+import { useState } from "react";
+import ItemList from "./ItemList.jsx";
 
+const ItemListContainer = () => {
+    const [items, setItems] = useState([]);
 
-function ItemListContainer () {
+    useEffect(() => {
+        const productos = [
+            {id:1, marca: "Audi", modelo: "A1", km: "0", año: "2022", precio: "18000", imagen: "../assets/img/productos/audi/audi-a1.jpg"},
+            {id:2, marca: "BMW", modelo: "135i", km: "0", año: "2022", precio: "22000", imagen: "./assets/img/productos/bmw/bmw-135.jpg"},
+            {id:3, marca: "Mercedes-Benz", modelo: "Clase C", km: "0", precio: "90000", año: "2022", imagen: "./assets/img/productos/mercedes benz/benz-claseC.jpeg"},
+            {id:4, marca: "Ford", modelo: "Mustang", km: "0", año: "2022", precio: "70000", imagen: "./assets/img/productos/ford/ford.jpg"},
+            {id:5, marca: "Peugeot", modelo: "208 GT", km: "0", año: "2022", precio: "11000", imagen: "./assets/img/productos/peugeot/peugeot-208-4.png"},
+        ];
+
+        const obtenerProductos = new Promise((resolve) => {
+            setTimeout(() => {
+                resolve(productos);
+            },3000)
+        });
+
+        obtenerProductos.then((respuesta) => {
+            setItems(respuesta);
+            });
+        }, []);
+
+    
+
     return (
-        <div className="listContainer">
-            <h1>Buscá tu marca favorita</h1>
-
-            <div className="cardContainer">
-
-                <div className="card" style={{width: '12rem'}}>
-                    <img src={logoAudi} className="card-img-top logo-marca" alt="Audi" />
-                </div>
-
-                <div className="card" style={{width: '12rem'}}>
-                    <img src={logoBmw} className="card-img-top logo-marca" alt="BMW" />
-                </div>
-
-                <div className="card" style={{width: '12rem'}}>
-                    <img src={logoMercedesBenz} className="card-img-top logo-marca" alt="Mercedes Benz" />
-                </div>
-
-                <div className="card" style={{width: '12rem'}}>
-                    <img src={logoPorsche} className="card-img-top logo-marca" alt="Porsche" />
-                </div>
-
-                <div className="card" style={{width: '12rem'}}>
-                    <img src={logoFord} className="card-img-top logo-marca" alt="Ford" />
-                </div>
-
-                <div className="card" style={{width: '12rem'}}>
-                    <img src={logoPeugeot} className="card-img-top logo-marca" alt="Peugeot" />
-                </div>
-
-                <div className="card" style={{width: '12rem'}}>
-                    <img src={logoToyota} className="card-img-top logo-marca" alt="Toyota" />
-                </div>
-
-                <div className="card" style={{width: '12rem'}}>
-                    <img src={logoVolkswagen} className="card-img-top logo-marca" alt="Volkswagen" />
-                </div>
-
-            </div>
-
-            <ItemCount stock={10} initial={1} onAdd={0} />
-
+        <div className="containerItemListContainer">
+            <ItemList items={items} />
         </div>
     )
 }
