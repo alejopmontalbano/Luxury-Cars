@@ -16,35 +16,35 @@ function Marcas () {
 
             <div className="marcasCardContainer">
 
-                <div className="card" style={{width: '12rem'}}>
+                <div className="card cardMarcas" style={{width: '12rem'}}>
                     <img src={logoAudi} className="card-img-top logo-marca" alt="Audi" />
                 </div>
 
-                <div className="card" style={{width: '12rem'}}>
+                <div className="card cardMarcas" style={{width: '12rem'}}>
                     <img src={logoBmw} className="card-img-top logo-marca" alt="BMW" />
                 </div>
 
-                <div className="card" style={{width: '12rem'}}>
+                <div className="card cardMarcas" style={{width: '12rem'}}>
                     <img src={logoMercedesBenz} className="card-img-top logo-marca" alt="Mercedes Benz" />
                 </div>
 
-                <div className="card" style={{width: '12rem'}}>
+                <div className="card cardMarcas" style={{width: '12rem'}}>
                     <img src={logoPorsche} className="card-img-top logo-marca" alt="Porsche" />
                 </div>
 
-                <div className="card" style={{width: '12rem'}}>
+                <div className="card cardMarcas" style={{width: '12rem'}}>
                     <img src={logoFord} className="card-img-top logo-marca" alt="Ford" />
                 </div>
 
-                <div className="card" style={{width: '12rem'}}>
+                <div className="card cardMarcas" style={{width: '12rem'}}>
                     <img src={logoPeugeot} className="card-img-top logo-marca" alt="Peugeot" />
                 </div>
 
-                <div className="card" style={{width: '12rem'}}>
+                <div className="card cardMarcas" style={{width: '12rem'}}>
                     <img src={logoToyota} className="card-img-top logo-marca" alt="Toyota" />
                 </div>
 
-                <div className="card" style={{width: '12rem'}}>
+                <div className="card cardMarcas" style={{width: '12rem'}}>
                     <img src={logoVolkswagen} className="card-img-top logo-marca" alt="Volkswagen" />
                 </div>
 
