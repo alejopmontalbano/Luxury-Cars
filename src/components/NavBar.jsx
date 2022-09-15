@@ -1,6 +1,7 @@
 import React from "react";
 import imgCarrito from "../assets/img/iconos/carrito-de-compras.png"
 import CartWidget from "./CartWidget";
+import { Link } from 'react-router-dom';
 
 function NavBar () {
 
@@ -10,19 +11,19 @@ return (
         <div className="links">
             <ul className="nav">
                 <li className="nav-item">
-                    <a className="nav-link" href="#">Inicio</a>
+                    <Link className="nav-link" to={"/"}>Inicio</Link>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="#">Buscá tu auto</a>
+                    <Link className="nav-link" to={"/"}>Buscá tu auto</Link>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="#">Contactános</a>
+                    <Link className="nav-link" to={"/"}>Contactános</Link>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="#">¿Quienes somos?</a>
+                    <Link className="nav-link" to={"/"}>¿Quienes somos?</Link>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="#">Sucursales</a>
+                    <Link className="nav-link" to={"/"}>Sucursales</Link>
                 </li>
             </ul>
         </div>

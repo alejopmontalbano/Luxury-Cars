@@ -6,7 +6,7 @@ function ItemList({items}) {
         <div>
             {items.map(item => (
                 <div key={item.id} className="containerItemList">
-                    <Item marca={item.marca} modelo={item.modelo} km={item.km} anio={item.anio} precio={item.precio} imagen={item.imagen}/>
+                    <Item marca={item.marca} modelo={item.modelo} km={item.km} anio={item.anio} precio={item.precio} imagen={item.imagen} id={item.id}/>
                 </div>
             ))}
         </div>

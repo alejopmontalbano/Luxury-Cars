@@ -4,10 +4,10 @@ import logoBmw from '../assets/img/logos/bmw-logo.jpg';
 import logoFord from '../assets/img/logos/ford-logo.jpg';
 import logoMercedesBenz from '../assets/img/logos/mercedes-benz-logo.jpg';
 import logoPeugeot from '../assets/img/logos/peugeot-logo.jpg';
-import logoPorsche from '../assets/img/logos/porsche-logo-2.jpg';
+/* import logoPorsche from '../assets/img/logos/porsche-logo-2.jpg';
 import logoToyota from '../assets/img/logos/toyota-logo.jpg';
-import logoVolkswagen from '../assets/img/logos/volkswagen-logo.jpg';
-
+import logoVolkswagen from '../assets/img/logos/volkswagen-logo.jpg'; */
+import { Link } from 'react-router-dom';
 
 function Marcas () {
     return (
@@ -17,36 +17,36 @@ function Marcas () {
             <div className="marcasCardContainer">
 
                 <div className="card cardMarcas" style={{width: '12rem'}}>
-                    <img src={logoAudi} className="card-img-top logo-marca" alt="Audi" />
+                    <Link to={"/marca/audi"}><img src={logoAudi} className="card-img-top logo-marca" alt="Audi" /></Link>
                 </div>
 
                 <div className="card cardMarcas" style={{width: '12rem'}}>
-                    <img src={logoBmw} className="card-img-top logo-marca" alt="BMW" />
+                   <Link to={"/marca/bmw"}><img src={logoBmw} className="card-img-top logo-marca" alt="BMW" /></Link>
                 </div>
 
                 <div className="card cardMarcas" style={{width: '12rem'}}>
-                    <img src={logoMercedesBenz} className="card-img-top logo-marca" alt="Mercedes Benz" />
+                    <Link to={"/marca/mercedez-benz"}><img src={logoMercedesBenz} className="card-img-top logo-marca" alt="Mercedes Benz" /></Link>
+                </div>
+
+                {/* <div className="card cardMarcas" style={{width: '12rem'}}>
+                    <Link to={"/marca/porsche"}><img src={logoPorsche} className="card-img-top logo-marca" alt="Porsche" /></Link>
+                </div> */}
+
+                <div className="card cardMarcas" style={{width: '12rem'}}>
+                    <Link to={"/marca/ford"}><img src={logoFord} className="card-img-top logo-marca" alt="Ford" /></Link>
                 </div>
 
                 <div className="card cardMarcas" style={{width: '12rem'}}>
-                    <img src={logoPorsche} className="card-img-top logo-marca" alt="Porsche" />
+                    <Link to={"/marca/peugeot"}><img src={logoPeugeot} className="card-img-top logo-marca" alt="Peugeot" /></Link>
+                </div>
+
+                {/* <div className="card cardMarcas" style={{width: '12rem'}}>
+                    <Link to={"/marca/toyota"}><img src={logoToyota} className="card-img-top logo-marca" alt="Toyota" /></Link>
                 </div>
 
                 <div className="card cardMarcas" style={{width: '12rem'}}>
-                    <img src={logoFord} className="card-img-top logo-marca" alt="Ford" />
-                </div>
-
-                <div className="card cardMarcas" style={{width: '12rem'}}>
-                    <img src={logoPeugeot} className="card-img-top logo-marca" alt="Peugeot" />
-                </div>
-
-                <div className="card cardMarcas" style={{width: '12rem'}}>
-                    <img src={logoToyota} className="card-img-top logo-marca" alt="Toyota" />
-                </div>
-
-                <div className="card cardMarcas" style={{width: '12rem'}}>
-                    <img src={logoVolkswagen} className="card-img-top logo-marca" alt="Volkswagen" />
-                </div>
+                    <Link to={"/marca/volkswagen"}><img src={logoVolkswagen} className="card-img-top logo-marca" alt="Volkswagen" /></Link>
+                </div> */}
 
             </div>
 

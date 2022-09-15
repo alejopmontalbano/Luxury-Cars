@@ -1,4 +1,5 @@
 import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from './components/NavBar.jsx';
 import Marcas from './components/Marcas.jsx';
 import Footer from './components/Footer.jsx';
@@ -10,12 +11,15 @@ function App() {
 
   return (
     <div>
-      <NavBar />
-      <Marcas />
-      <h1 className='text-center'>Nuestros Autos</h1>
-      <ItemListContainer />
-      <ItemDetailContainer />
-      <Footer />
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route exact path='/' element={<Marcas />}/>
+          <Route exact path='/marca/:marcaAuto' element={<ItemListContainer />}/>
+          <Route exact path='/auto/:id' element={<ItemDetailContainer />}/>
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </div>
   )
 }

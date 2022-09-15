@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Item = ({marca, modelo, imagen}) => {
+const Item = ({marca, modelo, imagen, id}) => {
 
     return (
         <div className="card">
@@ -9,7 +10,7 @@ const Item = ({marca, modelo, imagen}) => {
                 <h5 className="card-title"><b>{marca}</b></h5>
                 <p className="card-title">{modelo}</p>
             </div>
-            <button type="button" class="btn btn-outline-danger">Ver más</button>
+            <Link to={"/auto/" + id}><button type="button" class="btn btn-outline-danger">Ver más</button></Link>
         </div>
     )
 
