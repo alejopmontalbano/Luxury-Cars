@@ -157,3 +157,53 @@ header {
   flex-direction: column;
   padding: .5rem;
 }
+
+/* Footer*/
+
+.footerContainer{
+  background-color: #000;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #fff;
+  padding: 1.5rem;
+}
+
+.footerCol ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.redesContainer li {
+  background-color: #fff;
+  padding: .5rem;
+  margin: .5rem;
+  list-style: none;
+}
+
+.redesContainer li:hover {
+  background-color: #FF0000;
+}
+
+.redesContainer img {
+  width: 1.5rem;
+}
+
+.footerColCopyright {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.footerColCopyright p {
+  margin: 1rem 0;
+}
+
+.linkFooter {
+  color: #fff;
+  padding: 1rem;
+}
+
+.logoFooter {
+  width: 15rem;
+}

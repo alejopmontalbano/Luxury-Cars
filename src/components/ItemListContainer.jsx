@@ -10,7 +10,6 @@ const ItemListContainer = () => {
     const {marcaAuto} = useParams();
 
     useEffect(() => {
-        console.log(marcaAuto);
         let marca = "";
 
         if (marcaAuto === "audi") {
@@ -21,14 +20,6 @@ const ItemListContainer = () => {
             marca = "Mercedes-Benz";
         } else if (marcaAuto === "ford") {
             marca = "Ford";
-        } else if (marcaAuto === "peugeot") {
-            marca = "Peugeot";
-        } else if (marcaAuto === "peugeot") {
-            marca = "Peugeot";
-        } else if (marcaAuto === "peugeot") {
-            marca = "Peugeot";
-        } else if (marcaAuto === "peugeot") {
-            marca = "Peugeot";
         } else if (marcaAuto === "peugeot") {
             marca = "Peugeot";
         } else {
