@@ -77,10 +77,6 @@ header {
   box-shadow: 0px 0px 8px 2px #FF0000;
 }
 
-.logo-marca {
-  margin: 1rem;
-}
-
 /* ITEM COUNT */
 
 .boton-agregar {
@@ -206,4 +202,74 @@ header {
 
 .logoFooter {
   width: 15rem;
+}
+
+/* CONTACTANOS */
+
+.contactanosContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 4rem;
+}
+
+.contactanosTexto {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.contactanosTextoHijo {
+  padding: .2rem 0;
+}
+
+.contactanosBotones {
+  display: flex;
+  align-items: center;
+}
+
+.contactanosBotonesHijo {
+  margin: 1rem ;
+}
+
+.wpp {
+  width: 1.5rem;
+}
+
+/* SUCURSALES */
+
+.sucursalesContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.principalSucursales {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+  padding: 2rem;
+}
+
+.veniAVer {
+  color: #FF0000;
+}
+
+.containerSucursalesList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: .5rem;
+}
+
+.sucursalInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sucursalInfoHijos{
+  padding: .5rem 0;
 }

@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "sucursal": "Luxury Cars DOT",
+        "direccion": "Vedia 3600, C1430 CABA",
+        "inventario": 50
+    },
+    {
+        "id": 2,
+        "sucursal": "Luxury Cars SAN MARTIN",
+        "direccion": "Av. San Martín 420, C1419 San Martín, Buenos Aires",
+        "inventario": 40
+    },
+    {
+        "id": 3,
+        "sucursal": "Luxury Cars ABASTO",
+        "direccion": "Av. Corrientes 3247, C1193 CABA",
+        "inventario": 20
+    },
+    {
+        "id": 4,
+        "sucursal": "Luxury Cars TOM",
+        "direccion": "Panamericana Km 36.5, Ramal Pilar, B1667 Tortuguitas, Buenos Aires",
+        "inventario": 60
+    },
+    {
+        "id": 5,
+        "sucursal": "Luxury Cars AL OESTE",
+        "direccion": "Dr. Luis Güemes 369, B1707 Villa Sarmiento, Buenos Aires",
+        "inventario": 40
+    },
+    {
+        "id": 6,
+        "sucursal": "Luxury Cars AVELLANEDA",
+        "direccion": "Av. Hipólito Yrigoyen 299, Avellaneda, Buenos Aires",
+        "inventario": 55
+    }
+]
