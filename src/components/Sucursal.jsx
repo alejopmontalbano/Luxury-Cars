@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Sucursal({id, sucursal, direccion, inventario}) {
     return(
         <div>
-            <div className="card" key={id} style={{width: '30rem', height: '18rem'}}>
+            <div className="card" key={id} style={{width: '22rem', height: '18rem'}}>
                 <div className="card-body sucursalInfo">
                     <h5 className="card-title sucursalInfoHijos">{sucursal}</h5>
                     <p className="card-text sucursalInfoHijos">{direccion}</p>

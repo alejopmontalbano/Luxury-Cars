@@ -1,8 +1,52 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState, useEffect} from "react";
+
+const ItemCount = ({stock, initial, onAdd}) => {
+    
+    const [contador, setContador] = useState(initial);
+    const [itemStock, setItemStock] = useState(stock);
+
+    const restarCantidad = (valor) => {
+        if (valor > 0) {
+            setContador(valor);
+        }
+    }
+
+    const aumentarCantidad = (valor) => {
+        if (valor <= itemStock) {
+            setContador(valor);
+        }
+    }
+
+    const agregarAlCarrito = () => {
+        if (contador <= itemStock) {
+            onAdd(contador);
+            setItemStock(itemStock - contador);
+            setContador(itemStock - contador)
+        }
+    }
+
+    useEffect(() => {
+        setItemStock(stock);
+    }, [stock])
+
+    return (
+        <div className="itemCount">
+            <div className="input-group incrementador">
+                <input type="button" className="btn btn-outline-danger" value="-" onClick={() => {restarCantidad(contador - 1)}} />
+                    {contador}
+                <input type="button" className="btn btn-outline-danger" value="+" onClick={() => {aumentarCantidad(contador + 1)}} />
+            </div>
+            <input type="button" className=" boton-agregar btn btn-outline-danger" value="Agregar al Carrito" onClick={() => {agregarAlCarrito()}} />
+            <div className="ItemCount-stock">
+                <p><b>Stock disponible</b>: {itemStock}</p>
+            </div>
+        </div>
+    )
+
+}
 
 
-function ItemCount({stock, initial, onAdd}) {
+/* function ItemCount({stock, initial, onAdd}) {
 
     const [cantidad, setCantidad] = useState(initial);
     const [itemStock, setItemStock] = useState(stock);
@@ -40,7 +84,8 @@ function ItemCount({stock, initial, onAdd}) {
                 <p><b>Stock disponible</b>: {itemStock}</p>
             </div>
         </div>
+        
     )
-}
+} */
 
 export default ItemCount;

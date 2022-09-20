@@ -2,6 +2,7 @@ import React from "react";
 import logo from "../assets/img/iconos/logo.png"
 import { Link } from "react-router-dom";
 
+
 function CartWidget () {
     return (
         <div>

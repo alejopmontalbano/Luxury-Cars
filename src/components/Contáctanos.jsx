@@ -14,7 +14,7 @@ function Contactanos() {
                 </div>
                 <div className="contactanosBotones">
                     <span className="contactanosBotonesHijo rounded"><img src={wpp} alt="" className="wpp"/></span>
-                    <button className="contactanosBotonesHijo btn btn-outline-danger" type="button">Mandanos un e-mail</button>
+                    <button className="contactanosBotonesHijo btn btn-danger" type="button">Mandanos un e-mail</button>
                 </div>
             </div>
         </div>
