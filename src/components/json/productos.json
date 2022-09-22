@@ -6,7 +6,7 @@
         "km": "0",
         "anio": "2022",
         "precio": "18000",
-        "imagen": "img/productos/audi/audi-a1.jpg"
+        "imagen": "../img/productos/audi/audi-a1.jpg"
     },
     {
         "id": 2,

@@ -2,7 +2,9 @@ import React from "react";
 
 function Checkout() {
     return(
-        <div></div>
+        <div>
+            <h1>hola</h1>
+        </div>
     )
 }
 

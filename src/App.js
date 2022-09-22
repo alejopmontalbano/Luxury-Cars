@@ -8,8 +8,8 @@ import ItemDetailContainer from './components/ItemDetailContainer.jsx';
 import Sucursales from './components/Sucursales';
 import Contactanos from './components/Contáctanos';
 import Provider from './components/context/Context';
-/* import Carrito from './components/Carrito';
-import Checkout from './components/Checkout'; */
+import Carrito from './components/Carrito';
+import Checkout from './components/Checkout';
 
 function App() {
 
@@ -21,8 +21,8 @@ function App() {
           <Route exact path={'/'} element={<Marcas />}/>
           <Route exact path={'/marca/:marcaAuto'} element={<ItemListContainer />}/>
           <Route exact path={'/auto/:id'} element={<ItemDetailContainer />}/>
-          {/* <Route exact path={'/carrito'} element={<Carrito />}/>
-          <Route exact path={'/checkout'} element={<Checkout />}/> */}
+          <Route exact path={'/carrito'} element={<Carrito />}/>
+          <Route exact path={'/checkout'} element={<Checkout />}/>
         </Routes>
         <Contactanos />
         <Sucursales />

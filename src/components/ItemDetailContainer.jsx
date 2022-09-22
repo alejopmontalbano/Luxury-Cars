@@ -21,7 +21,7 @@ const ItemDetailContainer = () => {
         obtenerProductos.then((respuesta) => {
             setItems(respuesta);
             });
-        }, []);
+        }, [id]);
 
 
     return (

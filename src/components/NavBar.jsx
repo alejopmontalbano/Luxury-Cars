@@ -7,7 +7,8 @@ import { useContext } from "react";
 
 const NavBar = () => {
 
-    const {totalCarrito, limpiarCarrito} = useContext(cartContext);
+    const { totalCarrito } = useContext(cartContext);
+    const total = totalCarrito();
 
     return (
         <header>
@@ -32,10 +33,12 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="carrito">
-                <button type="button" class="btn position-relative" onClick={() => {limpiarCarrito()}}>
-                    <img src={imgCarrito} className="logoCarrito" alt="carrito"/>
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{totalCarrito()}</span>
-                </button>
+                <Link to="/carrito">
+                    <button type="button" class="btn position-relative">
+                        <img src={imgCarrito} className="logoCarrito" alt="carrito"/>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{total}</span>
+                    </button>
+                </Link>
             </div>
         </header>
     )

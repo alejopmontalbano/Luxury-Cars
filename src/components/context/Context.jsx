@@ -2,35 +2,56 @@ import React, { useState, createContext } from "react";
 
 export const cartContext = createContext();
 
-const Provider = ({Children}) => {
+const Provider = ({children}) => {
 
     const [carrito, setCarrito] = useState([]);
 
     const agregarItem = (item, cantidad) => {
-        if (consultarCarrito(item.id)) {
-            let producto = carrito.find(x => x.id === item.id);
-            carrito[carrito.indexOf(producto)].cantidad += cantidad;
-            setCarrito([...carrito])
+        const producto = {...item, cantidad };
+        if (consultarCarrito(producto.id)) {
+            sumarCantidad(producto);
         } else {
-            setCarrito([...carrito, {...item, cantidad:cantidad}]);
+            setCarrito([...carrito, producto]);
         }
-    }
-
-    const limpiarCarrito = () => {
-        setCarrito([]);
     }
 
     const consultarCarrito = (id) => {
         return carrito.some(item => item.id === id);
     }
 
+    const sumarCantidad = (producto) => {
+        const actualizacionCarrito = carrito.map((productoAgregado) => {
+            if (producto.id === productoAgregado.id) {
+                const productoIngresado = {...productoAgregado, cantidad: producto.cantidad,};
+                return productoIngresado;
+            } else {
+                return productoAgregado;
+            };
+        });
+        setCarrito(actualizacionCarrito);
+    };
+
+    const limpiarCarrito = () => {
+        setCarrito([]);
+    }
+
     const totalCarrito = () => {
-        return carrito.reduce((total, item) => total += item.cantidad, 0)
+        const productosEnElCarrito = [...carrito];
+        let contador = 0;
+        productosEnElCarrito.forEach((producto) => {
+            contador = contador + producto.cantidad;
+        });
+        return contador;
+    }
+
+    const eliminarProducto = (id) => {
+        const productoAEliminar = carrito.filter((producto) => producto.id !== id);
+        setCarrito(productoAEliminar);
     }
 
     return(
-        <cartContext.Provider value={{carrito, agregarItem, limpiarCarrito, totalCarrito}}>
-            {Children}
+        <cartContext.Provider value={{carrito, agregarItem, limpiarCarrito, totalCarrito, eliminarProducto}}>
+            {children}
         </cartContext.Provider>
     )
 }

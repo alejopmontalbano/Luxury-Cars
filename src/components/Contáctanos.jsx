@@ -13,7 +13,7 @@ function Contactanos() {
                     <p className="contactanosTextoHijo">Contestamos todas tus dudas de manera clara, rápida y directa. LLamnos al <b>0800-344-1631</b></p>
                 </div>
                 <div className="contactanosBotones">
-                    <span className="contactanosBotonesHijo rounded"><img src={wpp} alt="" className="wpp"/></span>
+                    <span className="contactanosBotonesHijo rounded"><img src={wpp} alt="boton wpp" className="wpp"/></span>
                     <button className="contactanosBotonesHijo btn btn-danger" type="button">Mandanos un e-mail</button>
                 </div>
             </div>

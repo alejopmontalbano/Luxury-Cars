@@ -6,11 +6,11 @@ import ItemCount from "./ItemCount";
 const ItemDetail = ({items}) => {
 
     const {agregarItem} = useContext(cartContext);
-    const [contador, setContador] = useState(0);
+    const [cantidad, setCantidad] = useState(0);
 
-    const onAdd = (contador) => {
-        setContador(contador);
-        agregarItem(items, contador);
+    const onAdd = (cantidad) => {
+        setCantidad(cantidad);
+        agregarItem(items, cantidad);
     }
 
     return (
@@ -26,7 +26,11 @@ const ItemDetail = ({items}) => {
                     <p className="card-text text-center"><b>Km: </b>{items.km}</p>
                     <p className="card-text text-center"><b>Año: </b>{items.anio}</p>
                 </div>
-                {contador === 0 ? <ItemCount initial={1} stock={items.stock} onAdd={onAdd} /> : <Link to={"/carrito"} className="btn btn-danger">Ir al carrito</Link>}
+                {cantidad === 0 ? (
+                    <ItemCount stock={10} initial={1} onAdd={onAdd} />
+                ) : (
+                    <Link to="/carrito" className="btn btn-danger">Ir al carrito</Link>
+                )}
             </div>
         </div>
     )
