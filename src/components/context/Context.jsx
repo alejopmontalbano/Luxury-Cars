@@ -44,13 +44,17 @@ const Provider = ({children}) => {
         return contador;
     }
 
+    const sumarProductos = () => {
+        return carrito.reduce((total, item) => total += item.cantidad * item.precio, 0)
+    }
+
     const eliminarProducto = (id) => {
         const productoAEliminar = carrito.filter((producto) => producto.id !== id);
         setCarrito(productoAEliminar);
     }
 
     return(
-        <cartContext.Provider value={{carrito, agregarItem, limpiarCarrito, totalCarrito, eliminarProducto}}>
+        <cartContext.Provider value={{carrito, agregarItem, limpiarCarrito, totalCarrito, eliminarProducto, sumarProductos}}>
             {children}
         </cartContext.Provider>
     )

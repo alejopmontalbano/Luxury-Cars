@@ -22,7 +22,7 @@ function Sucursales() {
         }, []);
 
     return(
-        <div id="sucursales" className="sucursalesContainer">
+        <div className="sucursalesContainer">
             <div className="principalSucursales">
                 <div>
                     <h1>Visitá nuestras sucursales</h1>

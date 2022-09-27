@@ -19,26 +19,26 @@ const NavBar = () => {
                         <Link className="nav-link" to={"/"}>Inicio</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to={"/"}>Buscá tu auto</Link>
+                        <Link className="nav-link" to={"/marcas"}>Buscá tu auto</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to={"/"}>Contactános</Link>
+                        <Link className="nav-link" to={"/contactanos"}>Contactános</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to={"/"}>¿Quienes somos?</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" to={"/"}>Sucursales</Link>
+                        <Link className="nav-link" to={"/sucursales"}>Sucursales</Link>
                     </li>
                 </ul>
             </div>
             <div className="carrito">
+
+                {(total > 0) ? 
                 <Link to="/carrito">
                     <button type="button" class="btn position-relative">
                         <img src={imgCarrito} className="logoCarrito" alt="carrito"/>
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{total}</span>
                     </button>
-                </Link>
+                </Link> : ""}
+                
             </div>
         </header>
     )

@@ -15,16 +15,16 @@
         "km": "0",
         "anio": "2022",
         "precio": "22000",
-        "imagen": "img/productos/bmw/bmw-135.jpg"
+        "imagen": "../img/productos/bmw/bmw-135.jpg"
     },
     {
         "id": 3,
-        "marca": "Mercedes-Benz",
+        "marca": "Mercedes",
         "modelo": "Clase C",
         "km": "0",
         "precio": "90000",
         "anio": "2022",
-        "imagen": "img/productos/mercedes benz/benz-claseC.jpeg"
+        "imagen": "../img/productos/mercedes-benz/benz-claseC.jpeg"
     },
     {
         "id": 4,
@@ -33,7 +33,7 @@
         "km": "0",
         "anio": "2022",
         "precio": "70000",
-        "imagen": "img/productos/ford/ford.jpg"
+        "imagen": "../img/productos/ford/ford.jpg"
     },
     {
         "id": 5,
@@ -42,6 +42,6 @@
         "km": "0",
         "anio": "2022",
         "precio": "11000",
-        "imagen": "img/productos/peugeot/peugeot-208-4.png"
+        "imagen": "../img/productos/peugeot/peugeot-208-4.png"
     }
 ]

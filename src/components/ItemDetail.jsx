@@ -7,14 +7,13 @@ const ItemDetail = ({items}) => {
 
     const {agregarItem} = useContext(cartContext);
     const [cantidad, setCantidad] = useState(0);
-
     const onAdd = (cantidad) => {
         setCantidad(cantidad);
         agregarItem(items, cantidad);
     }
 
     return (
-        <div className=" card ItemDetailContainer" key={items.id}>
+        <div className="card ItemDetailContainer" key={items.id}>
             <img src={items.imagen} className="card-img-top rounded images" alt={items.marca} />
             <div className="detallesContainer">
                 <div className="card-body">

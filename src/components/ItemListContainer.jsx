@@ -16,8 +16,8 @@ const ItemListContainer = () => {
             marca = "Audi";
         } else if (marcaAuto === "bmw") {
             marca = "BMW";
-        } else if (marcaAuto === "mercedes-benz") {
-            marca = "Mercedes-Benz";
+        } else if (marcaAuto === "mercedes") {
+            marca = "Mercedes";
         } else if (marcaAuto === "ford") {
             marca = "Ford";
         } else if (marcaAuto === "peugeot") {
@@ -34,7 +34,6 @@ const ItemListContainer = () => {
 
         obtenerProductos.then((respuesta) => {
             if (marca === "todasLasMarcas") {
-                console.log(respuesta);
                 setItems(respuesta);
             } else {
                 const array_autos = respuesta.filter(producto => producto.marca === marca);

@@ -98,7 +98,13 @@ header {
 }
 
 .incrementador {
-  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.incrementador p {
+  padding: 0 .8rem;
 }
 
 /* ITEM LIST CONTAINER*/
