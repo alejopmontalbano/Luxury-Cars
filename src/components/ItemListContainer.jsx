@@ -3,14 +3,26 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "./ItemList.jsx";
-import productos from "./json/productos.json";
+import { getFirestore, collection, getDocs, query, where } from "firebase/firestore";
+/* import productos from "./json/productos.json"; */
 
 const ItemListContainer = () => {
     const [items, setItems] = useState([]);
-    const {marcaAuto} = useParams();
+    const {marca} = useParams();
 
     useEffect(() => {
-        let marca = "";
+
+            const db = getFirestore();
+            const itemsCollection = collection(db, "productos");
+            const queryItems = marca ? query(itemsCollection, where("marca", "==", marca)) : itemsCollection;
+            getDocs(queryItems).then((snapShot) => {
+                if (snapShot.size > 0) {
+                    setItems(snapShot.docs.map(item => ({marca: item.marca, ...item.data()})));
+                }
+            })
+
+        }, [marca]);
+        /* let marca = "";
 
         if (marcaAuto === "audi") {
             marca = "Audi";
@@ -38,8 +50,8 @@ const ItemListContainer = () => {
             } else {
                 const array_autos = respuesta.filter(producto => producto.marca === marca);
                 setItems(array_autos);
-            }})
-        }, [marcaAuto]);
+            }})*/
+         
 
     
 
