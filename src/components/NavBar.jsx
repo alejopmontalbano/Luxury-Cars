@@ -8,7 +8,6 @@ import { useContext } from "react";
 const NavBar = () => {
 
     const { totalCarrito } = useContext(cartContext);
-    const total = totalCarrito();
 
     return (
         <header>
@@ -31,14 +30,13 @@ const NavBar = () => {
             </div>
             <div className="carrito">
 
-                {(total > 0) ? 
-                <Link to="/carrito">
+                <Link to={"/carrito"}>
                     <button type="button" class="btn position-relative">
                         <img src={imgCarrito} className="logoCarrito" alt="carrito"/>
-                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{total}</span>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{totalCarrito() > 0 ? totalCarrito() : ""}</span>
                     </button>
-                </Link> : ""}
-                
+                </Link> 
+            
             </div>
         </header>
     )

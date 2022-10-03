@@ -8,10 +8,23 @@ import { getFirestore, collection, getDocs, query, where } from "firebase/firest
 
 const ItemListContainer = () => {
     const [items, setItems] = useState([]);
-    const {marca} = useParams();
+    const {marcaAuto} = useParams();
+
+    let marca = "";
+
+        if (marcaAuto === "audi") {
+            marca = "Audi";
+        } else if (marcaAuto === "bmw") {
+            marca = "BMW";
+        } else if (marcaAuto === "mercedes") {
+            marca = "Mercedes";
+        } else if (marcaAuto === "ford") {
+            marca = "Ford";
+        } else if (marcaAuto === "peugeot") {
+            marca = "Peugeot";
+        }
 
     useEffect(() => {
-
             const db = getFirestore();
             const itemsCollection = collection(db, "productos");
             const queryItems = marca ? query(itemsCollection, where("marca", "==", marca)) : itemsCollection;

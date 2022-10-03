@@ -3,38 +3,23 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
-/* import productos from "./json/productos.json"; */
 import { getFirestore, doc, getDoc } from "firebase/firestore";
 
 
 const ItemDetailContainer = () => {
     const [items, setItems] = useState([]);
-    const {marca} = useParams();
+    const {id} = useParams();
 
     useEffect(() => {
-
             const db = getFirestore();
-            const response = doc(db, "productos", marca);
+            const response = doc(db, "productos", id);
             getDoc(response).then((snapShot) => {
                 if (snapShot.exists()) {
-                    setItems({marca:snapShot.marca, ...snapShot.data()});
+                    setItems({id:snapShot.id, ...snapShot.data()});
                 }
             })
-
-        }, [marca]);
-        /* const obtenerProductos = new Promise((resolve) => {
-            const productoObtenido = productos.filter((producto) => producto.id === id)
-            setTimeout(() => {
-                resolve(productoObtenido);
-            },2000)
-        });
-
-        obtenerProductos.then((respuesta) => {
-            setItems(respuesta);
-            }); */
+        }, [id]);
         
-
-
     return (
         <div className="containerItemDetailContainer">
             <ItemDetail items={items} />

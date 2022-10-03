@@ -47,7 +47,7 @@ const Carrito = () => {
                 : <div className="text-center">
                     <div className="alert alert-danger text-center" role="alert">¡No hay productos en tu carrito!</div>
                     <Link to={"/marcas"}><button className="btn btn-outline-danger ">¡Buscá tu auto YA!</button></Link>
-                    </div>
+                </div>
             }
         </div>
     )
