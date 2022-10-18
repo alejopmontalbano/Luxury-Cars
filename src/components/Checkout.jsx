@@ -25,7 +25,7 @@ function Checkout() {
             const ordenDeCompra = {comprador: comprador, productos: productos, fecha: fechaDeCompra, total: totalCarrito()};
 
             const db = getFirestore();
-            const orderCollection = collection(db, "orders");
+            const orderCollection = collection(db, "pedido");
             addDoc(orderCollection, ordenDeCompra).then(({id}) => {
                 setOrdenId(id);
                 limpiarCarrito();
@@ -35,23 +35,23 @@ function Checkout() {
 
     return(
         <div className="container py-5">
-            
+
             {totalCarrito() > 0 ?
             <div className="row">
                 <div className="col-md-4 offset-md-2">
-                        <div class="mb-3">
-                            <label for="nombre" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="nombre" onInput={(e) => setNombre(e.target.value)} />
+                        <div className="mb-3">
+                            <label for="nombre" className="form-label">Nombre</label>
+                            <input type="text" className="form-control" id="nombre" onInput={(e) => setNombre(e.target.value)} />
                         </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="text" class="form-control" id="email" onInput={(e) => setEmail(e.target.value)} />
+                        <div className="mb-3">
+                            <label for="email" className="form-label">Email</label>
+                            <input type="text" className="form-control" id="email" onInput={(e) => setEmail(e.target.value)} />
                         </div>
-                        <div class="mb-3">
-                            <label for="telefono" class="form-label">Celular</label>
-                            <input type="text" class="form-control" id="celular" onInput={(e) => setCelular(e.target.value)} />
+                        <div className="mb-3">
+                            <label for="telefono" className="form-label">Celular</label>
+                            <input type="text" className="form-control" id="celular" onInput={(e) => setCelular(e.target.value)} />
                         </div>
-                        <button type="button" class="btn btn-success" onClick={() => {enviarPedido()}}>Generar Orden</button>
+                        <button type="button" className="btn btn-success" onClick={() => {enviarPedido()}}>Generar pedido</button>
                 </div>
                 <div className="col-md-4">
                     <table className="table">

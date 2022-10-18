@@ -31,9 +31,9 @@ const NavBar = () => {
             <div className="carrito">
 
                 <Link to={"/carrito"}>
-                    <button type="button" class="btn position-relative">
+                    <button type="button" className="btn position-relative">
                         <img src={imgCarrito} className="logoCarrito" alt="carrito"/>
-                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{totalCarrito() > 0 ? totalCarrito() : ""}</span>
+                        <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{totalCarrito() > 0 ? totalCarrito() : ""}</span>
                     </button>
                 </Link> 
             

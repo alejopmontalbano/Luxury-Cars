@@ -69,7 +69,7 @@ const ItemListContainer = () => {
     
 
     return (
-        <div key={items.id} className="containerItemListContainer">
+        <div className="containerItemListContainer">
             <ItemList items={items} />
         </div>
     )
